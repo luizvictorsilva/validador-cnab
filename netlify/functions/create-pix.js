@@ -1,5 +1,5 @@
 // Netlify Serverless Function: Criação de Pagamento Pix no Mercado Pago
-const MP_ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN || "APP_USR-2777256007756678-020610-bc738d3ef288fca864aee141ca951699-1369429207";
+const MP_ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN;
 
 exports.handler = async function(event, context) {
   // Configuração de CORS
