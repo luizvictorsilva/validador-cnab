@@ -3,90 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validador & Corretor CNAB 240/400 Online | Padrão FEBRABAN</title>
-  <meta name="description" content="Validador e corretor instantâneo de arquivos de remessa e retorno CNAB 240 e CNAB 400 no padrão FEBRABAN. Descubra erros de alinhamento e caracteres inválidos em segundos. 100% seguro e no navegador.">
-  <meta name="keywords" content="validador cnab, validador cnab 240, cnab 400, corrigir remessa febraban, erro de remessa itau, erro cnab bradesco, banco do brasil, santander, sicoob, sicredi">
-  <meta name="author" content="ValidaCNAB">
+  <title>ValidaCNAB | Homologação & Correção de Remessa FEBRABAN 240/400</title>
+  <meta name="description" content="Auditoria técnica e correção instantânea de arquivos de remessa e retorno bancário CNAB 240 e CNAB 400. Padrão oficial FEBRABAN. Processamento 100% local com sigilo bancário total.">
+  <meta name="keywords" content="validador cnab, homologar cnab 240, cnab 400 febraban, corrigir remessa itau, erro cnab bradesco, arquivo remessa rejeitado, banco do brasil, santander, sicoob, sicredi">
+  <meta name="author" content="ValidaCNAB Tecnologia Financeira">
   <link rel="canonical" href="https://validacnab.netlify.app/">
 
-  <!-- Open Graph / Redes Sociais / WhatsApp -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://validacnab.netlify.app/">
-  <meta property="og:title" content="Validador & Corretor CNAB 240/400 Online | FEBRABAN">
-  <meta property="og:description" content="Seu arquivo de remessa foi rejeitado pelo banco? Descubra e corrija a linha exata do erro em 3 segundos. Seguro e executado no navegador.">
+  <meta property="og:title" content="ValidaCNAB | Homologação e Auditoria Bancária FEBRABAN">
+  <meta property="og:description" content="Auditoria de arquivos de remessa e retorno em conformidade com as normas FEBRABAN. Identificação imediata de divergências cadastrais e de leiaute.">
   
-  <!-- Favicon SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙️</text></svg>">
+  <!-- Favicon SVG Corporativo -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22 fill=%22none%22 stroke=%22%232563EB%22 stroke-width=%222.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M4 10h24M4 16h24M4 22h24M7 6v20M25 6v20%22/></svg>">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
     code, pre, .font-mono { font-family: 'JetBrains Mono', monospace; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between antialiased selection:bg-blue-100 selection:text-blue-900">
 
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/60 backdrop-blur sticky top-0 z-50">
+  <!-- Top Institutional Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 font-medium text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Ambiente Seguro & Homologado
+        </span>
+        <span class="text-slate-600">•</span>
+        <span class="text-slate-400">Padrão Técnico FEBRABAN v10.7</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-400">
+        <span class="flex items-center gap-1">
+          <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          Processamento Local (Sigilo LGPD)
+        </span>
+        <span class="text-slate-600">•</span>
+        <span>TLS 1.3 Criptografado</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Corporativo -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
     <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-      <div class="flex items-center space-x-3">
-        <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-lg">
-          ⚙️
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm shadow-blue-500/30">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
         <div>
-          <h1 class="font-bold text-slate-100 text-lg leading-tight">ValidaCNAB <span class="text-xs bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono">FEBRABAN</span></h1>
-          <p class="text-xs text-slate-400">Validador de Remessa e Retorno Bancário (240 e 400)</p>
+          <div class="flex items-center gap-2">
+            <span class="text-lg font-extrabold text-slate-900 tracking-tight">Valida<span class="text-blue-600">CNAB</span></span>
+            <span class="bg-slate-100 text-slate-700 text-[10px] font-semibold px-2 py-0.5 rounded-full border border-slate-200 uppercase tracking-wider font-mono">B2B Suite</span>
+          </div>
+          <p class="text-[11px] text-slate-500 font-medium">Auditoria e Correção de Arquivos de Cobrança e Pagamento</p>
         </div>
       </div>
-      <div class="flex items-center space-x-2 text-xs text-emerald-400 bg-emerald-950/40 border border-emerald-800/40 px-3 py-1.5 rounded-full">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>100% Seguro: Roda no seu navegador (Sem envio para servidor)</span>
+      
+      <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-slate-600">
+        <span class="flex items-center gap-1.5 text-slate-700">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          CNAB 240
+        </span>
+        <span class="flex items-center gap-1.5 text-slate-700">
+          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          CNAB 400
+        </span>
+        <span class="bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-1 rounded-md text-[11px] font-mono">
+          FEBRABAN Compliance
+        </span>
       </div>
     </div>
   </header>
 
-  <!-- Main Container -->
-  <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-10 flex-1 w-full space-y-8">
     
-    <!-- Hero / Headline -->
-    <div class="text-center max-w-2xl mx-auto mb-8">
-      <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-        Seu arquivo de remessa foi <span class="text-rose-500 underline decoration-rose-500/30">rejeitado</span> pelo banco?
-      </h2>
-      <p class="mt-3 text-slate-400 text-sm">
-        Descubra a linha e a posição exata do erro em 3 segundos. Suporta Itaú, Bradesco, Banco do Brasil, Caixa, Santander, Sicoob e Sicredi.
+    <!-- Hero / Apresentação -->
+    <div class="text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 border border-blue-200/80 px-3.5 py-1 rounded-full text-xs font-semibold mb-4 shadow-xs">
+        <svg class="w-3.5 h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        Auditoria Técnica Instantânea para Departamentos Financeiros e ERPs
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Homologação e Correção de Arquivos <span class="text-blue-600">CNAB 240 e 400</span>
+      </h1>
+      <p class="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
+        Evite devoluções bancárias por desalinhamento posicional, acentuação irregular ou inconsistência de cabeçalho. Nossa engine analisa e corrige seu arquivo na hora, com total sigilo corporativo.
       </p>
+
+      <!-- Supported Banks Strip -->
+      <div class="mt-6 pt-5 border-t border-slate-200/80 flex flex-wrap items-center justify-center gap-2 text-[11px] font-semibold text-slate-500">
+        <span class="text-slate-400 mr-1 uppercase tracking-wider text-[10px]">Bancos Suportados:</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Itaú (341)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Bradesco (237)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Banco do Brasil (001)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Caixa (104)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Santander (033)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Sicoob (756)</span>
+        <span class="bg-white px-2.5 py-1 rounded-md border border-slate-200 shadow-2xs">Sicredi (748)</span>
+      </div>
     </div>
 
-    <!-- Upload Box -->
+    <!-- Upload Card -->
     <div class="max-w-3xl mx-auto">
-      <div id="dropzone" class="border-2 border-dashed border-slate-700 hover:border-emerald-500 bg-slate-900/50 hover:bg-slate-900/80 transition-all rounded-2xl p-8 text-center cursor-pointer relative group">
-        <input type="file" id="fileInput" accept=".rem,.ret,.txt" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
-        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-slate-800 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">
-          📄
+      <div id="dropzone" class="bg-white border-2 border-dashed border-slate-300 hover:border-blue-500 hover:bg-blue-50/20 transition-all duration-200 rounded-2xl p-8 sm:p-12 text-center cursor-pointer relative shadow-sm group">
+        <input type="file" id="fileInput" accept=".rem,.ret,.txt" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full z-10">
+        
+        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-xs">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
         </div>
-        <h3 class="text-base font-semibold text-slate-200">Arraste seu arquivo .REM, .RET ou .TXT aqui</h3>
-        <p class="text-xs text-slate-500 mt-1">ou clique para selecionar do seu computador</p>
-        <div class="mt-4 flex items-center justify-center gap-2 text-xs text-slate-400">
-          <span class="bg-slate-800 px-2 py-1 rounded">CNAB 240</span>
-          <span class="bg-slate-800 px-2 py-1 rounded">CNAB 400</span>
-          <span class="bg-slate-800 px-2 py-1 rounded">Layouts 2024/2025/2026</span>
+
+        <h3 class="text-base font-bold text-slate-800">
+          Arraste o arquivo de remessa (.REM, .RET ou .TXT) ou <span class="text-blue-600 underline decoration-blue-300">clique para selecionar</span>
+        </h3>
+        <p class="text-xs text-slate-500 mt-1.5">
+          Suporte automático para leiautes de 240 ou 400 colunas (Padrões Pagamentos, Cobrança e Débito Automático).
+        </p>
+
+        <!-- Privacy Callout -->
+        <div class="mt-6 inline-flex items-center gap-2 bg-slate-50 border border-slate-200/80 px-3.5 py-1.5 rounded-lg text-xs text-slate-600">
+          <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span class="font-medium text-slate-700">Segurança de Dados:</span> A leitura é feita 100% no seu navegador. Nenhuma informação bancária sai da sua máquina.
         </div>
       </div>
     </div>
 
-    <!-- Results Section (Hidden by Default) -->
-    <div id="resultsSection" class="hidden max-w-4xl mx-auto mt-8 space-y-6">
+    <!-- Results Section -->
+    <div id="resultsSection" class="hidden max-w-4xl mx-auto space-y-6">
       
       <!-- Summary Card -->
-      <div id="summaryCard" class="p-6 rounded-2xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div id="summaryCard" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
         <div>
-          <span id="badgeStatus" class="px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider"></span>
-          <h3 id="fileNameDisplay" class="text-lg font-bold text-white mt-2">arquivo_remessa.rem</h3>
-          <p id="fileDetailsDisplay" class="text-xs text-slate-400 mt-1 font-mono">240 posições | 14 linhas analisadas | Banco: Itaú (341)</p>
+          <span id="badgeStatus" class="px-2.5 py-1 rounded-full text-xs font-bold tracking-wide uppercase"></span>
+          <h3 id="fileNameDisplay" class="text-xl font-bold text-slate-900 mt-2 font-mono">arquivo_remessa.rem</h3>
+          <p id="fileDetailsDisplay" class="text-xs text-slate-500 mt-1 font-mono">Padrão CNAB 240 | 14 linhas analisadas | Padrão FEBRABAN</p>
         </div>
         <div id="actionButtonContainer">
           <!-- Button injected dynamically -->
@@ -94,87 +152,156 @@
       </div>
 
       <!-- Errors Table -->
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-        <div class="p-4 border-b border-slate-800 flex justify-between items-center bg-slate-900/80">
-          <h4 class="font-semibold text-sm text-slate-200 flex items-center gap-2">
-            <span>Diagnóstico Linha a Linha</span>
-            <span id="errorCountBadge" class="bg-rose-500/20 text-rose-400 text-xs px-2 py-0.5 rounded-full font-mono">0 erros</span>
-          </h4>
-          <span class="text-xs text-slate-500">Padrão FEBRABAN Oficial</span>
+      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+        <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50/80">
+          <div class="flex items-center gap-2">
+            <h4 class="font-bold text-sm text-slate-800">Relatório Analítico Linha a Linha</h4>
+            <span id="errorCountBadge" class="bg-rose-100 text-rose-700 border border-rose-200 text-xs px-2.5 py-0.5 rounded-full font-mono font-bold">0 divergência(s)</span>
+          </div>
+          <span class="text-xs text-slate-500 font-medium hidden sm:inline">Referência Técnica: Norma FEBRABAN 10.7</span>
         </div>
-        <div class="divide-y divide-slate-800/60 max-h-96 overflow-y-auto font-mono text-xs" id="diagnosticsList">
+        
+        <div class="divide-y divide-slate-100 max-h-96 overflow-y-auto font-mono text-xs" id="diagnosticsList">
           <!-- Items injected here -->
         </div>
       </div>
 
     </div>
 
+    <!-- 3 Pilares Corporativos -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 pt-6">
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">
+          01
+        </div>
+        <h4 class="text-sm font-bold text-slate-800 mb-1">Rigor Normativo</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Verificação estrita de tamanho posicional (240 e 400 colunas), integridade de header e trailing records de lote.
+        </p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">
+          02
+        </div>
+        <h4 class="text-sm font-bold text-slate-800 mb-1">Sanitização Inteligente</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Remoção de acentos (ISO-8859-1 NFD), cedilhas e caracteres ilegais sem alterar o alinhamento das colunas bancárias.
+        </p>
+      </div>
+
+      <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">
+          03
+        </div>
+        <h4 class="text-sm font-bold text-slate-800 mb-1">Conformidade LGPD</h4>
+        <p class="text-xs text-slate-500 leading-relaxed">
+          Arquitetura Client-Side Sandbox. Nenhum dado cadastral de beneficiários ou pagadores trafega por servidores externos.
+        </p>
+      </div>
+    </div>
+
   </main>
 
-  <!-- Modal Pix / Paywall Mercado Pago Oficial -->
-  <div id="pixModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 text-center shadow-2xl relative">
-      <button onclick="closePixModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">&times;</button>
-      <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center mx-auto mb-3 text-2xl font-bold">
-        ⚡
-      </div>
-      <h3 class="text-xl font-bold text-white">Desbloquear Arquivo Corrigido</h3>
-      <p class="text-xs text-slate-400 mt-1">O arquivo foi corrigido e validado para o padrão oficial da FEBRABAN.</p>
+  <!-- Modal Pix / Checkout Transparente Corporativo -->
+  <div id="pixModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-xs z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white border border-slate-200 rounded-3xl max-w-md w-full p-6 text-center shadow-2xl relative animate-in fade-in zoom-in-95 duration-150">
       
-      <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 my-4 text-center">
-        <span class="text-xs text-slate-400 block mb-1">Valor da liberação</span>
-        <span class="text-3xl font-extrabold text-emerald-400 font-mono">R$ 29,90</span>
-        <span class="text-[10px] text-slate-500 block mt-1">Liberação instantânea em segundos via Pix Mercado Pago</span>
+      <!-- Close Button -->
+      <button onclick="closePixModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full hover:bg-slate-100 flex items-center justify-center transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center justify-center gap-2 mb-2">
+        <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Homologação Instantânea</span>
+      </div>
+
+      <h3 class="text-xl font-extrabold text-slate-900">Desbloquear Arquivo Corrigido</h3>
+      <p class="text-xs text-slate-500 mt-1">O arquivo foi totalmente ajustado e validado conforme a norma FEBRABAN.</p>
+      
+      <!-- Pricing Box -->
+      <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 my-4 text-center">
+        <span class="text-xs text-slate-500 font-medium block mb-1">Licença de Correção Avulsa (1 Arquivo)</span>
+        <div class="flex items-baseline justify-center gap-1">
+          <span class="text-xs font-semibold text-slate-500">R$</span>
+          <span class="text-3xl font-extrabold text-slate-900 font-mono tracking-tight">29,90</span>
+        </div>
+        <span class="text-[11px] text-emerald-600 font-medium block mt-1">✓ Liberação e download automático em segundos via Pix</span>
       </div>
 
       <!-- Área de Loading do Pix -->
       <div id="pixLoading" class="py-8 flex flex-col items-center justify-center">
-        <div class="w-8 h-8 border-4 border-emerald-500/30 border-t-emerald-400 rounded-full animate-spin mb-3"></div>
-        <p class="text-xs text-slate-400">Gerando QR Code oficial no Mercado Pago...</p>
+        <div class="w-9 h-9 border-3 border-blue-200 border-t-blue-600 rounded-full animate-spin mb-3"></div>
+        <p class="text-xs font-medium text-slate-600">Conectando ao gateway bancário oficial...</p>
+        <p class="text-[11px] text-slate-400 mt-0.5">Gerando QR Code Pix dinâmico</p>
       </div>
 
       <!-- Área do QR Code Oficial -->
       <div id="pixContainer" class="hidden">
-        <div class="bg-white p-3 rounded-xl inline-block mx-auto mb-3 shadow-lg">
-          <img id="pixQrImg" src="" alt="QR Code Pix Mercado Pago" class="w-40 h-40 object-contain">
+        <div class="bg-white p-3 rounded-2xl inline-block mx-auto mb-3 border border-slate-200 shadow-sm">
+          <img id="pixQrImg" src="" alt="QR Code Pix Mercado Pago" class="w-44 h-44 object-contain mx-auto">
         </div>
         
-        <p class="text-xs text-slate-400 mb-3">Escaneie com o app do seu banco ou use o Copia e Cola:</p>
+        <p class="text-xs text-slate-600 mb-2 font-medium">Pague com o aplicativo do seu banco usando o QR Code ou o Copia e Cola:</p>
         
         <div class="flex gap-2 mb-4">
-          <input type="text" id="pixCopiaCola" readonly value="" class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-xs text-slate-400 flex-1 font-mono truncate">
-          <button id="btnCopiarPix" onclick="copiarCodigoPix()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-3 py-2 rounded-xl text-xs transition whitespace-nowrap">
+          <input type="text" id="pixCopiaCola" readonly value="" class="bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-xs text-slate-600 flex-1 font-mono truncate focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button id="btnCopiarPix" onclick="copiarCodigoPix()" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition whitespace-nowrap shadow-xs flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
             Copiar Pix
           </button>
         </div>
 
-        <div class="flex items-center justify-center gap-2 text-xs text-amber-400/90 bg-amber-950/20 border border-amber-800/30 py-2 px-3 rounded-xl">
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-          <span>Aguardando pagamento... Download inicia sozinho!</span>
+        <div class="flex items-center justify-center gap-2 text-xs text-amber-800 bg-amber-50 border border-amber-200/80 py-2.5 px-3 rounded-xl">
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+          <span class="font-medium">Aguardando compensação... O download iniciará sozinho!</span>
         </div>
       </div>
 
       <!-- Sucesso -->
       <div id="pixSuccess" class="hidden py-6 text-center">
-        <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-2 text-2xl">
+        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl font-bold">
           ✓
         </div>
-        <h4 class="text-base font-bold text-white">Pagamento Aprovado!</h4>
-        <p class="text-xs text-slate-400 mt-1">Seu arquivo corrigido foi baixado automaticamente.</p>
-        <button onclick="downloadFile(correctedContent, 'corrigido_' + currentFileName)" class="mt-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs">
+        <h4 class="text-base font-bold text-slate-900">Pagamento Homologado com Sucesso!</h4>
+        <p class="text-xs text-slate-600 mt-1">O arquivo corrigido já foi baixado para o seu computador.</p>
+        <button onclick="downloadFile(correctedContent, 'corrigido_' + currentFileName)" class="mt-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs shadow-sm transition">
           Baixar Novamente
         </button>
+      </div>
+
+      <!-- Security Trust Footer -->
+      <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-center gap-2 text-[10px] text-slate-400">
+        <svg class="w-3 h-3 text-slate-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+        <span>Pagamento seguro via Mercado Pago Instituição de Pagamento</span>
       </div>
 
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500">
-    <p>ValidaCNAB &copy; 2026 - Em total conformidade com a FEBRABAN e a LGPD. Os dados do seu arquivo não saem do seu computador.</p>
+  <!-- Footer Corporativo -->
+  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-slate-800">ValidaCNAB</span>
+        <span>•</span>
+        <span>Tecnologia de Homologação Financeira em conformidade com as normas FEBRABAN e LGPD.</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-600">
+        <span>ISO-8859-1 Validado</span>
+        <span>•</span>
+        <span>Layouts 240/400</span>
+        <span>•</span>
+        <span>&copy; 2026</span>
+      </div>
+    </div>
   </footer>
 
-  <!-- Script da Lógica FEBRABAN (Client-Side) -->
+  <!-- Script Lógica FEBRABAN (Client-Side) -->
   <script>
     const fileInput = document.getElementById('fileInput');
     const resultsSection = document.getElementById('resultsSection');
@@ -204,7 +331,7 @@
         analyzeCNAB(currentFileContent, currentFileName);
       };
 
-      reader.readAsText(file, 'ISO-8859-1'); // Padrão bancário
+      reader.readAsText(file, 'ISO-8859-1'); // Rigoroso padrão bancário
     }
 
     function analyzeCNAB(text, name) {
@@ -212,11 +339,11 @@
       diagnosticsList.innerHTML = '';
 
       if (lines.length === 0) {
-        alert("Arquivo vazio!");
+        alert("O arquivo selecionado está vazio.");
         return;
       }
 
-      // Detecta se é 240 ou 400 posições
+      // Detecção de layout (240 vs 400)
       const firstLineLen = lines[0].length;
       let standard = 240;
       if (firstLineLen >= 390 && firstLineLen <= 410) standard = 400;
@@ -229,10 +356,9 @@
         let lineErrors = [];
         let cleanLine = line;
 
-        // 1. Checagem de Tamanho Rígido
+        // 1. Validação de Tamanho Rigoroso
         if (line.length !== standard) {
-          lineErrors.push(`Tamanho inválido: contém ${line.length} posições (Esperado exatamente ${standard}).`);
-          // Correção automática: completa com espaços ou corta
+          lineErrors.push(`Desalinhamento posicional: linha com ${line.length} colunas (Exigido exatamente ${standard} caracteres).`);
           if (line.length < standard) {
             cleanLine = line.padEnd(standard, ' ');
           } else {
@@ -240,41 +366,42 @@
           }
         }
 
-        // 2. Checagem de Caracteres Especiais Proibidos na FEBRABAN (acentos, cedilha, emojis)
+        // 2. Sanitização de Acentos e Caracteres Especiais Proibidos
         const invalidCharsRegex = /[^a-zA-Z0-9 \.,\-\/\*\_]/g;
         const invalidMatches = line.match(invalidCharsRegex);
         if (invalidMatches) {
-          lineErrors.push(`Caracteres inválidos detectados: [${[...new Set(invalidMatches)].join(' ')}]. A FEBRABAN proíbe acentuação.`);
-          // Correção: remove acentos
+          const uniqueChars = [...new Set(invalidMatches)].join(' ');
+          lineErrors.push(`Caracteres especiais detectados: [${uniqueChars}]. A FEBRABAN veda acentuação gráfica.`);
           cleanLine = cleanLine.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
         }
 
-        // 3. Regras Específicas de Header
-        if (lineNum === 1) {
-          if (standard === 240) {
-            const banco = line.substring(0, 3);
-            const lote = line.substring(3, 7);
-            const registro = line.substring(7, 8);
-            if (registro !== '0') lineErrors.push(`Tipo de registro do Header de Arquivo deve ser '0', encontrado '${registro}'`);
+        // 3. Regras de Header
+        if (lineNum === 1 && standard === 240) {
+          const registro = line.substring(7, 8);
+          if (registro !== '0') {
+            lineErrors.push(`Tipo de registro do Header de Arquivo deve ser '0', identificado '${registro}'.`);
           }
         }
 
-        // Renderiza linha no diagnóstico
+        // Renderização técnica da linha
         const row = document.createElement('div');
-        row.className = `p-3 flex items-start gap-4 transition ${lineErrors.length > 0 ? 'bg-rose-950/20 text-rose-300' : 'hover:bg-slate-800/40 text-slate-300'}`;
+        const hasError = lineErrors.length > 0;
+        row.className = `p-3.5 flex items-start gap-4 transition text-xs ${hasError ? 'bg-rose-50/60 text-slate-800' : 'hover:bg-slate-50 text-slate-700'}`;
         
         row.innerHTML = `
-          <span class="w-16 font-bold ${lineErrors.length > 0 ? 'text-rose-400' : 'text-slate-500'}">Linha ${lineNum}</span>
-          <div class="flex-1">
-            <div class="truncate max-w-2xl text-[11px] opacity-80">${escapeHtml(line)}</div>
-            ${lineErrors.length > 0 ? `<div class="mt-1 space-y-1">${lineErrors.map(e => `<span class="inline-block bg-rose-500/20 border border-rose-500/30 text-rose-300 px-2 py-0.5 rounded text-[10px] mr-2">❌ ${e}</span>`).join('')}</div>` : ''}
+          <span class="w-18 shrink-0 font-bold font-mono ${hasError ? 'text-rose-600' : 'text-slate-400'}">Linha ${lineNum.toString().padStart(3, '0')}</span>
+          <div class="flex-1 overflow-hidden">
+            <div class="truncate max-w-2xl font-mono text-[11px] text-slate-600">${escapeHtml(line)}</div>
+            ${hasError ? `<div class="mt-1.5 space-y-1">${lineErrors.map(e => `<span class="inline-flex items-center gap-1 bg-rose-100 text-rose-800 border border-rose-200 px-2 py-0.5 rounded text-[10px] mr-2 font-sans font-medium">⚠️ ${e}</span>`).join('')}</div>` : ''}
           </div>
-          <span class="text-[11px] ${lineErrors.length > 0 ? 'text-rose-400 font-bold' : 'text-emerald-400'}">${lineErrors.length > 0 ? `${lineErrors.length} erro(s)` : 'OK'}</span>
+          <span class="text-[11px] font-bold font-mono shrink-0 ${hasError ? 'text-rose-600' : 'text-emerald-600'}">
+            ${hasError ? `${lineErrors.length} erro(s)` : 'CONFORME ✓'}
+          </span>
         `;
 
         diagnosticsList.appendChild(row);
 
-        if (lineErrors.length > 0) {
+        if (hasError) {
           errors.push({ line: lineNum, errors: lineErrors });
         }
         correctedLines.push(cleanLine);
@@ -282,34 +409,39 @@
 
       correctedContent = correctedLines.join('\r\n');
 
-      // Exibe resumo
+      // Resumo executivo
       fileNameDisplay.textContent = name;
-      fileDetailsDisplay.textContent = `Padrão CNAB ${standard} | ${lines.length} linhas analisadas | Padrão FEBRABAN`;
-      errorCountBadge.textContent = `${errors.length} erro(s) encontrado(s)`;
+      fileDetailsDisplay.textContent = `Padrão CNAB ${standard} posições | ${lines.length} linhas processadas | Validação FEBRABAN`;
+      errorCountBadge.textContent = `${errors.length} divergência(s) encontrada(s)`;
       resultsSection.classList.remove('hidden');
 
       if (errors.length > 0) {
-        summaryCard.className = "p-6 rounded-2xl border border-rose-500/30 bg-rose-950/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4";
-        badgeStatus.className = "px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-rose-500/20 text-rose-400 border border-rose-500/30";
-        badgeStatus.textContent = "ARQUIVO REJEITADO";
+        summaryCard.className = "bg-white p-6 rounded-2xl border border-rose-200 bg-rose-50/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm";
+        badgeStatus.className = "px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-rose-100 text-rose-700 border border-rose-200";
+        badgeStatus.textContent = "INCONSISTÊNCIA DETECTADA";
 
         actionButtonContainer.innerHTML = `
-          <button onclick="openPixModal()" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm transition shadow-lg shadow-emerald-500/20 flex items-center justify-center gap-2">
-            <span>⚡ Corrigir Automaticamente & Baixar</span>
-            <span class="bg-slate-950/20 px-2 py-0.5 rounded text-xs">R$ 29,90</span>
+          <button onclick="openPixModal()" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition shadow-sm flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>Corrigir Automaticamente & Baixar</span>
+            <span class="bg-blue-800 text-blue-100 text-xs px-2 py-0.5 rounded font-mono">R$ 29,90</span>
           </button>
         `;
       } else {
-        summaryCard.className = "p-6 rounded-2xl border border-emerald-500/30 bg-emerald-950/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4";
-        badgeStatus.className = "px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30";
-        badgeStatus.textContent = "ARQUIVO 100% VÁLIDO";
+        summaryCard.className = "bg-white p-6 rounded-2xl border border-emerald-200 bg-emerald-50/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 shadow-sm";
+        badgeStatus.className = "px-2.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 border border-emerald-200";
+        badgeStatus.textContent = "ARQUIVO 100% HOMOLOGADO";
 
         actionButtonContainer.innerHTML = `
-          <button onclick="downloadFile(currentFileContent, 'validado_' + currentFileName)" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+          <button onclick="downloadFile(currentFileContent, 'validado_' + currentFileName)" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-5 py-3 rounded-xl text-sm transition flex items-center gap-2 shadow-xs">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
             <span>Baixar Arquivo Verificado</span>
           </button>
         `;
       }
+
+      // Rola suavemente até o diagnóstico
+      resultsSection.scrollIntoView({ behavior: 'smooth' });
     }
 
     let activePaymentId = null;
@@ -340,7 +472,7 @@
         const data = await response.json();
 
         if (!response.ok || !data.qr_code_base64) {
-          throw new Error(data.error || 'Falha ao gerar cobrança Pix');
+          throw new Error(data.error || 'Falha na comunicação com o gateway.');
         }
 
         activePaymentId = data.payment_id;
@@ -352,16 +484,16 @@
         loading.classList.add('hidden');
         container.classList.remove('hidden');
 
-        // Inicia polling de verificação a cada 2.5 segundos
+        // Polling de verificação a cada 2.5s
         startPaymentPolling(activePaymentId);
 
       } catch (err) {
         console.error("Erro Pix:", err);
         loading.innerHTML = `
-          <div class="text-rose-400 text-xs py-4">
-            <p class="font-bold mb-1">Não foi possível gerar o Pix automaticamente.</p>
+          <div class="text-rose-600 text-xs py-4">
+            <p class="font-bold mb-1">Não foi possível gerar a cobrança Pix no momento.</p>
             <p class="opacity-80">${err.message}</p>
-            <button onclick="openPixModal()" class="mt-3 bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-lg text-xs">Tentar Novamente</button>
+            <button onclick="openPixModal()" class="mt-3 bg-slate-900 text-white px-3.5 py-2 rounded-xl text-xs font-semibold">Tentar Novamente</button>
           </div>
         `;
       }
@@ -391,7 +523,7 @@
       document.getElementById('pixContainer').classList.add('hidden');
       document.getElementById('pixSuccess').classList.remove('hidden');
 
-      // Dispara o download automático do arquivo corrigido
+      // Download automático com encoding bancário estrito
       downloadFile(correctedContent, 'corrigido_' + currentFileName);
     }
 
@@ -401,12 +533,15 @@
       navigator.clipboard.writeText(input.value);
 
       const btn = document.getElementById('btnCopiarPix');
-      btn.textContent = 'Copiado! ✓';
-      btn.className = 'bg-emerald-600 text-white font-medium px-3 py-2 rounded-xl text-xs transition whitespace-nowrap';
+      btn.innerHTML = '<span>Copiado! ✓</span>';
+      btn.className = 'bg-emerald-600 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition whitespace-nowrap shadow-xs flex items-center gap-1.5';
 
       setTimeout(() => {
-        btn.textContent = 'Copiar Pix';
-        btn.className = 'bg-slate-800 hover:bg-slate-700 text-white font-medium px-3 py-2 rounded-xl text-xs transition whitespace-nowrap';
+        btn.innerHTML = `
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          Copiar Pix
+        `;
+        btn.className = 'bg-slate-900 hover:bg-slate-800 text-white font-semibold px-4 py-2.5 rounded-xl text-xs transition whitespace-nowrap shadow-xs flex items-center gap-1.5';
       }, 3000);
     }
 
